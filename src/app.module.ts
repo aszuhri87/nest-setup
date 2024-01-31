@@ -11,6 +11,7 @@ import { UserRepository } from './user/repository/user.repository';
 import { UserService } from './user/user.service';
 import { UserController } from './user/user.controller';
 import { JwtService } from '@nestjs/jwt';
+import { CacheModule } from '@nestjs/cache-manager';
 
 @Module({
   imports: [
@@ -31,7 +32,7 @@ import { JwtService } from '@nestjs/jwt';
     }),
     UserModule,
     AuthModule,
-    UserRepository,
+    CacheModule.register(),
   ],
 
   controllers: [AppController, UserController],
