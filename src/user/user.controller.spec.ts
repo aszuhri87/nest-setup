@@ -41,4 +41,10 @@ describe('UserController', () => {
       controller.findAll();
     });
   });
+
+  // describe('findOne', () => {
+  //   it('should find one user ', () => {
+  //     controller.findOne('1');
+  //   });
+  // });
 });
